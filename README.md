@@ -55,7 +55,7 @@ output_size = 500L  # Example output size
 model = nn$Linear(input_size, output_size, bias=FALSE)
 
 # Set custom weights
-weight_matrix = torch$randn(500L,500L)
+weight_matrix = torch$randn(input_size,output_size)
 model$weight = nn$Parameter(weight_matrix)
 
 watcher = ww$WeightWatcher()
